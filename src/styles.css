@@ -27,3 +27,18 @@ main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
+
+#nav-bar{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+#nav-bar img{
+  height: 100%;
+}
+.nav-links{
+  display: flex;
+}
+.nav-links li{
+  width: 100px;
+}
