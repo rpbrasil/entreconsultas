@@ -9,6 +9,14 @@ html, body {
   background-color: #fff;
 }
 
+.verticalhorizontal {
+    display: table-cell;
+    height: 300px;
+    text-align: center;
+    width: 300px;
+    vertical-align: middle;
+}
+
 main {
   margin: auto;
   width: 90%;
