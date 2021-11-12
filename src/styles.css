@@ -28,9 +28,10 @@ main > h1 {
   height: 80px;
   display: block;
   margin: auto;
+  background-color: #f9b004;
 }
 #nav-bar img{
-  max-width:80%;
+  max-width:inherit;
   min-width: 300px;
   height: auto;
 }
