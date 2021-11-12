@@ -25,15 +25,15 @@ main > h1 {
 }
 
 #nav-bar{
-  height: 80px;
+  height: auto;
   display: block;
   margin: auto;
   background-color: #f9b004;
 }
 #nav-bar img{
-  max-width:inherit;
-  min-width: 300px;
-  height: inherit;
+  max-width:80%;
+  min-width: auto;
+  height: auto;
 }
 .nav-links{
   display: flex;
