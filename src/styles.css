@@ -10,12 +10,8 @@ html, body {
 }
 
 .verticalhorizontal {
-    display: table-cell;
-    height: 300px;
     text-align: center;
-    width: 300px;
-    vertical-align: middle;
-}
+  }
 
 main {
   margin: auto;
@@ -29,12 +25,14 @@ main > h1 {
 }
 
 #nav-bar{
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
+  height: 50px;
+  display: block;
+  margin: auto;
 }
 #nav-bar img{
-  height: 100%;
+  max-width:100%;
+  min-width: 300px;
+  height: auto;
 }
 .nav-links{
   display: flex;
