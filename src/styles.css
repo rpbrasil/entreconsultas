@@ -41,3 +41,13 @@ main > h1 {
 .nav-links li{
   width: 100px;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #f9b004;
+  text-align: center;
+}
