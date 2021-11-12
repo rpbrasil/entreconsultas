@@ -42,6 +42,26 @@ main > h1 {
   width: 100px;
 }
 
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  .calendly-inline-widget {
+      height:630px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  .calendly-inline-widget {
+    height: 750px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 780px) {
+  .calendly-inline-widget {
+    height: 800px;
+  }
+}
 .footer {
   position: fixed;
   left: 0;
