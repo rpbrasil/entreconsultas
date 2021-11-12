@@ -33,7 +33,7 @@ main > h1 {
 #nav-bar img{
   max-width:inherit;
   min-width: 300px;
-  height: auto;
+  height: inherit;
 }
 .nav-links{
   display: flex;
