@@ -47,12 +47,18 @@ main > h1 {
   .calendly-inline-widget {
       height:630px;
   }
+  h1 {
+    font-size: 0.7em;
+  }
 }
 
 /* For Tablets */
 @media screen and (min-width: 540px) and (max-width: 780px) {
   .calendly-inline-widget {
     height: 750px;
+  }
+  h1 {
+    font-size: 1.0em;
   }
 }
 
