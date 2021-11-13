@@ -67,7 +67,7 @@ main > h1 {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgb(80,40,0);
   color: #f9b004;
   text-align: center;
 }
