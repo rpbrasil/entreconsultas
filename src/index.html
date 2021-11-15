@@ -45,9 +45,9 @@
   <script>
     function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition();
   } else { 
-    x.innerHTML = "Habilite sua localização para aproveitar melhor esse aplicativo.";
+    alert("Habilite sua localização para aproveitar melhor esse aplicativo.");
   }
 }
   </script>
