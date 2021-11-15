@@ -19,7 +19,7 @@
 </script>
 </head>
 
-<body>  
+<body onload="getLocation()">  
   <nav class="verticalhorizontal" id="nav-bar">
     <img src="images/ENTRECONSULTAS.png" alt="telemedicina">
   </nav>
@@ -42,5 +42,14 @@
         <small style="font-size:9px">CNPJ: 19.137.565.0001/43</small>
       </div>      
   </div>
+  <script>
+    function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Habilite sua localização para aproveitar melhor esse aplicativo.";
+  }
+}
+  </script>
 </body>
 </html>
