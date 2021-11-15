@@ -43,28 +43,27 @@
       </div>      
   </div>
   <script>
-    erro = ""
     function getLocation() {
         if (navigator.geolocation) {
               navigator.geolocation.getCurrentPosition(showPosition,showError);
               } 
         else { 
-          alert(erro);
+          alert("Atualize seu browser para permitir a geolocalização.");
         }
       }
       function showError(error) {
         switch(error.code) {
           case error.PERMISSION_DENIED:
-            erro = "Você negou o acesso a geolocalização. Permita sua localização para aproveitar melhor esse aplicativo."
+            alert("Você negou o acesso a geolocalização. Permita sua localização para aproveitar melhor esse aplicativo.")
             break;
           case error.POSITION_UNAVAILABLE:
-              erro = "Geolocalização não disponível. Permita sua localização para aproveitar melhor esse aplicativo."
+              alert("Geolocalização não disponível. Permita sua localização para aproveitar melhor esse aplicativo.")
             break;
           case error.TIMEOUT:
-              erro = "Solicitação de geolocalização perdeu validade. Permita sua localização para aproveitar melhor esse aplicativo."
+              alert("Solicitação de geolocalização perdeu validade. Permita sua localização para aproveitar melhor esse aplicativo.")
             break;
           case error.UNKNOWN_ERROR:
-              erro = "Erro desconhecido. Permita sua localização para aproveitar melhor esse aplicativo."
+              alert("Erro desconhecido. Permita sua localização para aproveitar melhor esse aplicativo.")
             break;
           }
         }
