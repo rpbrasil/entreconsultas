@@ -44,12 +44,13 @@
   </div>
   <script>
     function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition();
-  } else { 
-    alert("Habilite sua localização para aproveitar melhor esse aplicativo.");
-  }
-}
+        if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(position);
+              } 
+        else { 
+          alert("Permita sua localização para aproveitar melhor esse aplicativo.");
+        }
+      }
   </script>
 </body>
 </html>
