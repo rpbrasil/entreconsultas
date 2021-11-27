@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-  <!--Google Analytics begin-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-478M6NGG40">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-478M6NGG40');
-    //gtag('config', 'MEASUREMENT_ID_2');
-  </script>
-<!--Google Analytics end-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-213722652-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-213722652-1');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -1579,11 +1577,11 @@
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
   function handleClicks(event,ctype) {
-    console.log("evento: ",ctype=='agenda',ctype)
+    //console.log("evento: ",ctype=='agenda',ctype)
     gtag('event', ctype, {'send_to':'G-478M6NGG40','event_callback': function() {
       console.log("evento enviado: "+ctype);
     }});    
-    console.log('https://calendly.com/dr_augusto/'+ctype);
+  //console.log('https://calendly.com/dr_augusto/'+ctype);
       if (ctype=='agenda'){
         Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto'});return false;
         }
