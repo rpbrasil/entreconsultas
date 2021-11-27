@@ -1580,11 +1580,7 @@
   <script>
   function handleClicks(event,ctype) {
     console.log("evento: ",ctype=='agenda',ctype)
-    gtag('event', 'click', {
-      'event_category': 'agCalendly',
-      'event_label': ctype,
-      'value': 1
-    });    
+    gtag('event', ctype, {'send_to':'G-478M6NGG40'});    
     console.log('https://calendly.com/dr_augusto/'+ctype);
       if (ctype=='agenda'){
         Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto'});return false;
