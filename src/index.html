@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N2XZL99');</script>
-  <!-- End Google Tag Manager -->
-
+  <!--Google Analytics begin-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'MEASUREMENT_ID');
+    gtag('config', 'MEASUREMENT_ID_2');
+  </script>
+<!--Google Analytics end-->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -28,10 +32,6 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2XZL99"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <div class="wrapper">
     <div class="preloader">
       <div class="loading"><span></span><span></span><span></span><span></span></div>
@@ -233,7 +233,7 @@
                 <a href="department-single.html" class="nav__item-link">Terapia de Casal</a>
               </li><!-- /.nav-item -->
             </ul> <!-- /.miniPopup-departments -->
-            <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__primary btn__rounded ml-30">
+            <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__primary btn__rounded ml-30">
               <i class="icon-calendar"></i>
               <span>Agende aqui</span>
             </a>
@@ -365,7 +365,7 @@
               <div class="contact__content">
                 <h2 class="contact__title">Agenda de Eventos</h2>
                 <p class="contact__desc">Você escolhe a forma como quer ser atendido.</p>
-                <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__white btn__outlined btn__rounded">
+                <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__white btn__outlined btn__rounded">
                   <span>Veja a agenda</span><i class="icon-arrow-right"></i>
                 </a>
               </div><!-- /.contact__content -->
@@ -620,7 +620,7 @@
             <div class="note font-weight-bold">
               <i class="far fa-file-alt color-primary"></i>
               <span>Médico de família online ? Use com tranquilidade.</span>
-              <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__link btn__secondary">
+              <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__link btn__secondary">
                 <span>Veja minha agenda</span><i class="icon-arrow-right"></i>
               </a>
             </div>
@@ -636,7 +636,7 @@
                   </div>
                 </div><!-- /.testimonials__rating-inner -->
               </div><!-- /.testimonials__rating -->
-              <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__primary btn__rounded">
+              <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__primary btn__rounded">
                 <span>Agende aqui</span> <i class="icon-arrow-right"></i>
               </a>
             </div><!-- /.info__meta -->
@@ -819,7 +819,7 @@
         <div class="row">
           <div class="col-md-12 col-lg-6 offset-lg-3 text-center">
             <p class="font-weight-bold color-gray mb-0">Você e seu médico sem intermediários.
-              <a href="#" onclick="handleOutboundLinkClicks(Event);" class="color-secondary">
+              <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="color-secondary">
                 <span>Agende seu evento !</span> <i class="icon-arrow-right"></i>
               </a>
             </p>
@@ -1489,7 +1489,7 @@
                 <p class="color-gray">Aqui praticamos a Medicina de Família, voltada ao entendimento
                   da dinâmica do núcleo familiar, com respeito e compaixão.
                 </p>
-                <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__primary btn__primary-style2 btn__link">
+                <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__primary btn__primary-style2 btn__link">
                   <span>Agende seu evento</span> <i class="icon-arrow-right"></i>
                 </a>
               </div><!-- /.footer-widget__content -->
@@ -1518,7 +1518,7 @@
                     <li><a href="https://www.instagram.com/saudecolorida_app/">Instagram</a></li>
                     <li><a href="https://t.me/saudecolorida">Telegram</a></li>
                     <li><a href="https://www.facebook.com/appsaudecolorida/">Facebook</a></li>
-                    <li><a href="#" onclick="handleOutboundLinkClicks(Event);">Agenda</a></li>
+                    <li><a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');">Agenda</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget__content -->
@@ -1536,7 +1536,7 @@
                   <li class="color-body">Todos os nossos atendimentos são realizados na forma de reunião online ou por telefone.</li>
                 </ul>
                 <div class="d-flex align-items-center">
-                  <a href="#" onclick="handleOutboundLinkClicks(Event);" class="btn btn__primary btn__link mr-30">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'agenda');" class="btn btn__primary btn__link mr-30">
                     <i class="icon-arrow-right"></i> <span>Atendemos em todo o Brasil.</span>
                   </a>
                   <ul class="social-icons list-unstyled mb-0">
@@ -1578,15 +1578,13 @@
   <script src="assets/js/main.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
-  function handleOutboundLinkClicks(event) {
-    //console.log("evento: ",event)
-    ga('send', 'event', {
-      eventCategory: 'Agenda',
-      eventAction: 'click',
-      eventLabel: event.Calendly,
-      transport: 'beacon'
+  function handleOutboundLinkClicks(event,content_type) {
+    console.log("evento: ",content_type)
+    gtag("event", "select_content", {
+      content_type: content_type,
+      item_id: "agCalendly"
     });
-    console.log(ga.getAll());
+    //console.log(gtag.prototype.log);
     Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto'});return false;
   }
   </script>
