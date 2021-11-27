@@ -58,7 +58,7 @@
                       </a>
                       <p>Use esta seção se você estiver em situação de emergência.
                       </p>
-                      <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/consulta-de-emergencia'});return false;" class="btn btn__secondary btn__link btn__block">
+                      <a href="#" onclick="handleOutboundLinkClicks(Event,'consulta-de-emergencia');" class="btn btn__secondary btn__link btn__block">
                         <span>Agende agora</span> <i class="icon-arrow-right"></i>
                       </a>
                     </div><!-- /.miniPopup-emergency -->
@@ -70,7 +70,7 @@
                     <i class="icon-location"></i><a href="#">Em qualquer lugar do Brasil</a>
                   </li>
                   <li>
-                    <i class="icon-clock"></i><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/consulta-de-emergencia'});return false;">Veja horários na agenda</a>
+                    <i class="icon-clock"></i><a href="#" onclick="handleOutboundLinkClicks(Event,'consulta-de-emergencia');">Veja horários na agenda</a>
                   </li>
                 </ul><!-- /.contact__list -->
                 <div class="d-flex">
@@ -351,7 +351,7 @@
               <div class="contact__content">
                 <h2 class="contact__title">Emergências</h2>
                 <p class="contact__desc">Use quando se encontrar em situação de urgência.</p>
-                <a href="#services" class="phone__number">
+                <a href="#" onclick="handleOutboundLinkClicks(Event,'consulta-de-emergencia');" class="phone__number">
                   <i class="icon-phone"></i> <span>Nós ligamos para você.</span>
                 </a>
               </div><!-- /.contact__content -->
@@ -490,7 +490,7 @@
                     <li>Jogos lúdicos</li>
                     <li>Depoimentos</li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/grupo-de-apoio-ansiedade-depressao1'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'grupo-de-apoio-ansiedade-depressao1');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -512,7 +512,7 @@
                     <li>Laboratório</li>
                     <li>Patologia</li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/check-up-de-saude'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'check-up-de-saude');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -534,7 +534,7 @@
                     <li>Clínica Geral/Geriatria</li>
                     <li>Ortopedia/Outras</li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/consulta'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'consulta');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -555,7 +555,7 @@
                     <li>Fitoterápicos </li>
                     <li>Yoga & Meditação</li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/terapias-naturais-consulta-inicial'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'terapias-naturais-consulta-inicial');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -577,7 +577,7 @@
                     <li>Jogos Lúdicos</li>
                     <li>Encenação </li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/terapia_casal'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'terapia_casal');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -598,7 +598,7 @@
                     <li>Perdas e Decepções</li>
                     <li>Síndrome do Pânico</li>
                   </ul>
-                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/grupo-de-apoio-perdas-frustracoes'});return false;" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleOutboundLinkClicks(Event,'grupo-de-apoio-perdas-frustracoes');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -1578,18 +1578,19 @@
   <script src="assets/js/main.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
-  function handleOutboundLinkClicks(event,content_type) {
-    console.log("evento: ",content_type)
-    gtag("event", "select_content", {
-      content_type: content_type,
-      item_id: "agCalendly"
-    });
-    //console.log(gtag.prototype.log);
-      if (content_type=='agenda'){
+  function handleOutboundLinkClicks(event,ctype) {
+    console.log("evento: ",ctype=='agenda',ctype)
+    gtag('event', 'click', {
+      'event_category': 'agCalendly',
+      'event_label': ctype,
+      'value': 1
+    });    
+    console.log('https://calendly.com/dr_augusto/'+ctype);
+      if (ctype=='agenda'){
         Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto'});return false;
         }
         else {
-          Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/${content_type}'});return false;
+          Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/'+ctype});return false;
         }
     }
             
