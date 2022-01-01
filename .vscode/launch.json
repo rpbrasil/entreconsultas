@@ -4,9 +4,8 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "type": "pwa-chrome",
+            "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
             "file": "c:\\entreconsultas\\src\\index.html"
