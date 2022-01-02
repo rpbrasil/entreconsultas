@@ -8,7 +8,7 @@
             "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:\\Users\\rpbrasil\\Documents\\GitHub\\entreconsultas\\src\\index.html"
+            "file": "C:\\Users\\rpbrasil\\Local_Repos\\entreconsultas\\src\\index.html\\entreconsultas\\src\\index.html"
         }
     ]
 }
