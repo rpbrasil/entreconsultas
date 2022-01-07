@@ -1,5 +1,16 @@
 {
- "name": "Entreconsultas",
+    "name": "Entreconsultas",
+    "short_name": "Entreconsultas",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#ffffff",
+    "description": "Agende seu evento com Dr Augusto.",
+    "dir": "ltr",
+    "categories": "medical",
+    "lang": "pt",
+    "orientation": "any",
+    "scope": "/",
+    "theme_color": "#00ff00",
  "icons": [
   {
    "src": "assets/images/favicon/android-icon-36x36.png",
@@ -37,6 +48,5 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ],
- "display":"standalone"
+ ]
 }

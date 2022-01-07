@@ -1,4 +1,3 @@
-/* Add to Homescreen v3.2.3 ~ (c) 2015 Matteo Spinelli ~ @license: http://cubiq.org/license */
 (function (window, document) {
     
     // Check for addEventListener browser support (prevent errors in IE<9)
