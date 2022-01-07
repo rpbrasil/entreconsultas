@@ -9,6 +9,13 @@
             "request": "launch",
             "name": "Open index.html",
             "file": "C:\\Users\\rpbrasil\\Local_Repos\\entreconsultas\\src\\index.html\\entreconsultas\\src\\index.html"
+        },
+        {
+            "name": "Attach to Node Functions",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "preLaunchTask": "func: host start"
         }
     ]
 }
