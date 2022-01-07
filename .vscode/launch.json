@@ -6,16 +6,30 @@
     "configurations": [
         {
             "type": "firefox",
+            "request": "attach",
+            "name": "Attach",
+            "port": 9222
+        },
+        {
+            "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
             "file": "C:\\Users\\rpbrasil\\Local_Repos\\entreconsultas\\src\\index.html"
         },
         {
-            "name": "Attach to Node Functions",
-            "type": "node",
-            "request": "attach",
-            "port": 9229,
-            "preLaunchTask": "func: host start"
-        }
+            "name": "Firefox localhost",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "url": "http://localhost:8080/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome localhost",
+            "url": "https://localhost:8080/index.html",
+            "webRoot": "${workspaceFolder}"
+          }
     ]
 }

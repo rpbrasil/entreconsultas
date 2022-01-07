@@ -19,16 +19,7 @@
   <title>Entreconsultas - Médico de Família Online</title>
 
   <link rel="stylesheet" type="text/css" href="assets/css/addtohomescreen.css">
-  <script src="assets/js/addtohomescreen.js"></script>
-  <script>
-  if (
-    (("standalone in window.navigator") && !window.navigator.standalone)
-    ||
-    ( !window.matchMedia('(display-mode: standalone').matches)
-  ) {
-  addToHomescreen();
-}
-  </script>
+  <script src="assets/js/addtohomescreen.js"></script>  
 
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
@@ -1694,5 +1685,30 @@
     }
             
   </script>
+  <script>
+    // Ensure that the browser supports the service worker API
+if (navigator.serviceWorker) {
+// Start registration process on every page load
+window.addEventListener('load', () => {
+	addToHomescreen();
+  navigator.serviceWorker
+		// The register function takes as argument
+		// the file path to the worker's file
+		.register('/assets/js/service_worker.js')
+		// Gives us registration object
+		.then(reg => console.log('Service Worker Registered'))
+		.catch(swErr => console.log(
+				`Service Worker Installation Error: ${swErr}}`));
+	});
+}
+
+    // if (
+    //   (("standalone in window.navigator") && !window.navigator.standalone)
+    //   ||
+    //   ( !window.matchMedia('(display-mode: standalone').matches)
+    // ) {
+    addToHomescreen();
+  // }
+    </script>
 </body>
 </html>
