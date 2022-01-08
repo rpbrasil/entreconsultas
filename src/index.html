@@ -47,6 +47,93 @@
   <!-- Widget de link do Calendly - início -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">  
 <!-- Widget de link do Calendly - fim -->
+<style>
+ /* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #070707;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 2px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  top:10%
+}
+
+@media screen and (min-width: 400px) {
+  .modal-content {
+    width: 100%;
+    height: 70%;    
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .modal-content {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
 </head>
 
 <body>
@@ -147,7 +234,7 @@
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
               <li class="nav__item has-dropdown">
-                <a href="#slider" class="nav__item-link">Sobre</a>
+                <a onclick="modalNav.style.display='block';" class="nav__item-link" style="cursor:pointer;">Sobre mim</a>
                 <ul class="dropdown-menu" style="display:none">
                   <li class="nav__item">
                     <a href="about-us.html" class="nav__item-link">About Us</a>
@@ -206,18 +293,18 @@
                   </li><!-- /.nav-item -->
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown" style="display:none">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Shop</a>
+              <li class="nav__item has-dropdown" style="display:block">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Meus Canais</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a href="shop.html" class="nav__item-link">Our Products</a>
+                    <a onclick="modal.style.display='block';" class="nav__item-link" style="cursor:pointer;">Vídeos</a>
                   </li><!-- /.nav-item -->
                   <li class="nav__item">
-                    <a href="shop-single-product.html" class="nav__item-link">Products Single</a>
-                  </li><!-- /.nav-item -->
+                    <a href="https://t.me/saudecolorida" class="nav__item-link">Telegram</a>
+                  </li>
                   <li class="nav__item">
-                    <a href="cart.html" class="nav__item-link">Cart</a>
-                  </li><!-- /.nav-item -->
+                    <a href="https://www.instagram.com/saudecolorida_app/" class="nav__item-link">Instagram</a>
+                  </li>
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
               <li class="nav__item">
@@ -228,10 +315,10 @@
           </div><!-- /.navbar-collapse -->
           <div class="d-none d-xl-flex align-items-center position-relative ml-30">
             <div class="miniPopup-departments-trigger">
-              <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span>
+              <!-- <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span> -->
               <a href="#services">Serviços</a>
             </div>
-            <ul id="miniPopup-departments" class="miniPopup miniPopup-departments dropdown-menu">
+            <ul id="miniPopup-departments" class="miniPopup miniPopup-departments dropdown-menu" style="display:none">
               <li class="nav__item">
                 <a href="department-single.html" class="nav__item-link">Médico online</a>
               </li><!-- /.nav-item -->
@@ -259,6 +346,31 @@
         </div><!-- /.container -->
       </nav><!-- /.navabr -->
     </header><!-- /.Header -->
+
+    <!-- The ModalNav -->
+<div id="myModalNav" class="modal">
+  <div class="modal-dialog  modal-lg modal-dialog-centered">    
+    <div class="modal-content" style="color: white;text-align:center;padding:8px;background-color:#283b6a">  
+      <figure>
+        <img src="assets/images/team/rpFoto3-1.jpg" style="padding:3px;border-radius:50%;" width="90" height="108" alt="Dr Augusto">                        
+      </figure>  
+      <p>Sou médico de família e utilizo telemedicina há mais de 30 anos.</p>
+      <p>Não há melhor trabalho que atender os avós, pais e netos de uma família, acompanhar seu crescimento e maturidade, levar saúde e tranquilidade para as pessoas nos quatro cantos do Brasil.</p>
+      <p>Sou feliz e realizado porque sei que isso é um privilégio que poucos podem alcançar.</p>
+      <span class="close" id="closeNav">Clique aqui para fechar &times;</span>
+    </div>
+  </div>
+</div>    
+
+     <!-- Trigger/Open The Modal -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">  
+    <span class="close" id="closeVideo">&times;</span>  
+    <iframe width=100% height=100% src="https://www.youtube.com/embed/MdIj5aNDSck?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+  </div>
+</div>    
 
     <!-- ============================
         Slider
@@ -408,7 +520,7 @@
     <!-- ============================
         contact info
     ============================== -->
-    <section class="contact-info py-0">
+    <section class="contact-info py-0" id="boxes_emerg">
       <div class="container">
         <div class="row row-no-gutter boxes-wrapper">
           <div class="col-sm-12 col-md-4">
@@ -422,6 +534,7 @@
                 <a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');" class="phone__number">
                   <i class="icon-phone"></i> <span>Nós ligaremos para você.</span>
                 </a>
+                <small style="color:black;">Serviço sujeito à disponibilidade do profissional. Se você estiver em risco de vida, procure o recurso hospitalar mais próximo.</small>
               </div><!-- /.contact__content -->
             </div><!-- /.contact-box -->
           </div><!-- /.col-md-4 -->
@@ -431,10 +544,10 @@
                 <i class="icon-health-report"></i>
               </div><!-- /.contact__icon -->
               <div class="contact__content">
-                <h2 class="contact__title">Agenda de Eventos</h2>
+                <h2 class="contact__title">Minha Agenda</h2>
                 <p class="contact__desc">Você escolhe a forma como quer ser atendido.</p>
                 <a href="#" onclick="handleClicks(Event,'agenda');" style="cursor:pointer" class="btn btn__white btn__outlined btn__rounded">
-                  <span>Veja a agenda</span><i class="icon-arrow-right"></i>
+                  <span>Consulte Meus horários</span><i class="icon-arrow-right"></i>
                 </a>
               </div><!-- /.contact__content -->
             </div><!-- /.contact-box -->
@@ -553,11 +666,23 @@
                   <p class="service__desc">Faça parte dos nossos Grupos de Apoio e comprove como
                     a força do grupo pode alavancar as mudanças.
                   </p>
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Dinâmicas</li>
-                    <li>Jogos lúdicos</li>
-                    <li>Depoimentos</li>
-                  </ul>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Dinâmicas</li>
+                          <li>Jogos lúdicos</li>
+                          <li>Depoimentos</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                          border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                      </div>
+                    </div>
+                  </div>
+                  
                   <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-ansiedade-depressao1');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -575,11 +700,22 @@
                   <p class="service__desc">Prevenção sob medida que 
                     cabe no seu bolso. Aqui fazemos a solicitação de exames e a análise dos resultados.
                   </p>
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Imagem</li>
-                    <li>Laboratório</li>
-                    <li>Patologia</li>
-                  </ul>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Imagem</li>
+                          <li>Laboratório</li>
+                          <li>Patologia</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                          border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                      </div>
+                    </div>
+                  </div>
                   <a href="#" onclick="handleClicks(Event,'check-up-de-saude');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -597,11 +733,21 @@
                   <p class="service__desc">Faça sua consulta por telemedicina na comodidade do seu 
                     lar ou de onde você estiver.
                   </p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
                   <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Ginecologia/Pediatria</li>
-                    <li>Clínica Geral/Geriatria</li>
-                    <li>Ortopedia/Outras</li>
-                  </ul>
+                    <li>Toda a família</li>
+                    <li>Experiência 30+</li>
+                    <li>Emergências</li>
+                  </ul></div>
+                  <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                    <small>Pix ou Cartão</small>
+                    <h2><span class="badge rounded-pill" style="background-color: transparent;
+                      border: 3px solid #21cdc0;">R$180</span></h2>                        
+                  </div>
+                </div>
+              </div>
                   <a href="#" onclick="handleClicks(Event,'consulta');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -618,11 +764,22 @@
                   <h4 class="service__title">Terapias Naturais</h4>
                   <p class="service__desc">Para quem prefere tratamentos naturais e abordagens mais sutis, sem medicamentos alopáticos.
                   </p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -30px;text-align: left;">
                   <ul class="list-items list-items-layout1 list-unstyled">
                     <li>Florais</li>
                     <li>Fitoterápicos </li>
                     <li>Yoga & Meditação</li>
                   </ul>
+                </div>
+                <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                  <small>Pix ou Cartão</small>
+                  <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 60</span></h2>                        
+                </div>
+              </div>
+            </div>
                   <a href="#" onclick="handleClicks(Event,'terapias-naturais-consulta-inicial');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -640,11 +797,22 @@
                   <p class="service__desc">Encontre uma nova forma de encarar as desilusões e aprenda a lidar 
                     com todos os contra-tempos.
                   </p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
                   <ul class="list-items list-items-layout1 list-unstyled">
                     <li>Dinâmicas</li>
                     <li>Jogos Lúdicos</li>
                     <li>Encenação </li>
                   </ul>
+                </div>
+                <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                  <small>Pix ou Cartão</small>
+                  <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$200</span></h2>                        
+                </div>
+              </div>
+            </div>
                   <a href="#" onclick="handleClicks(Event,'terapia_casal');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -661,11 +829,22 @@
                   <h4 class="service__title">Grupos de Apoio</h4>
                   <p class="service__desc">Para todos aqueles que se sentem sem forças ou sem fé, uma abordagem de renovação e reposicionamento.
                   </p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
                   <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Ansiedade & Depressão</li>
-                    <li>Perdas e Decepções</li>
-                    <li>Síndrome do Pânico</li>
+                    <li>Ansiedade</li>
+                    <li>Depressão</li>
+                    <li>Pânico</li>
                   </ul>
+                </div>
+                <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                  <small>Pix ou Cartão</small>
+                  <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                </div>
+              </div>
+            </div>
                   <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -680,13 +859,24 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Orientação Rápida</h4>
-                  <p class="service__desc">Para dúvidas de saúde, medicamentos, especialidade, sem perder tempo, sem burocracia.
+                  <p class="service__desc">Para dúvidas de saúde, efeitos de medicamentos, melhor especialidade, sem perder tempo, sem burocracia.
                   </p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col" style="margin: -20px;text-align: left;">
                   <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Resultado de exames</li>
-                    <li>Medicamentos e efeitos</li>
-                    <li>Melhor especialidade</li>
+                    <li>Result. exames</li>
+                    <li>Medicamentos</li>
+                    <li>Especialidade</li>
                   </ul>
+                </div>
+                <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                  <small>Pix ou Cartão</small>
+                  <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                </div>
+              </div>
+            </div>
                   <a href="#" onclick="handleClicks(Event,'express');" class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
@@ -803,7 +993,7 @@
             </div><!-- /.feature-item -->
           </div><!-- /.col-lg-3 -->
           <!-- Feature item #3 -->
-          <div onclick="location.href='#services';" style="cursor: pointer;" class="col-sm-6 col-md-6 col-lg-3">
+          <div onclick="location.href='#boxes_emerg';" style="cursor: pointer;" class="col-sm-6 col-md-6 col-lg-3">
             <div class="feature-item">
               <div class="feature__img" style="display:none">
                 <img src="assets/images/services/3.jpg" alt="service" loading="lazy">
@@ -1603,7 +1793,7 @@
                 <h6 class="footer-widget__title">Links</h6>
                 <nav>
                   <ul class="list-unstyled">
-                    <li><a href="https://www.instagram.com/saudecolorida_app/">Blog de saúde</a></li>
+                    <li><a id="myBtnModal">Videos</a></li>
                     <li><a href="https://www.instagram.com/saudecolorida_app/">Instagram</a></li>
                     <li><a href="https://t.me/saudecolorida">Telegram</a></li>
                     <li><a href="https://www.facebook.com/appsaudecolorida/">Facebook</a></li>
@@ -1687,28 +1877,71 @@
   </script>
   <script>
     // Ensure that the browser supports the service worker API
-if (navigator.serviceWorker) {
-// Start registration process on every page load
-window.addEventListener('load', () => {
-	addToHomescreen();
-  navigator.serviceWorker
-		// The register function takes as argument
-		// the file path to the worker's file
-		.register('/assets/js/serviceworker.js')
-		// Gives us registration object
-		.then(reg => console.log('Service Worker Registered'))
-		.catch(swErr => console.log(
-				`Service Worker Installation Error: ${swErr}}`));
+    if (navigator.serviceWorker) {
+      // Start registration process on every page load
+      window.addEventListener('load', () => {
+        	addToHomescreen();
+          navigator.serviceWorker
+          // The register function takes as argument
+          // the file path to the worker's file
+          .register('/assets/js/serviceworker.js')
+          // Gives us registration object
+          .then(reg => console.log('Service Worker Registered'))
+          .catch(swErr => console.log(`Service Worker Installation Error: ${swErr}}`));
 	});
 }
+  </script>
+  <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+var modalNav = document.getElementById("myModalNav");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtnModal");
 
-    // if (
-    //   (("standalone in window.navigator") && !window.navigator.standalone)
-    //   ||
-    //   ( !window.matchMedia('(display-mode: standalone').matches)
-    // ) {
-    addToHomescreen();
-  // }
-    </script>
+// Get the <span> element that closes the modal
+var span = document.getElementById("closeNav");
+var span1 = document.getElementById("closeVideo");
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modalNav.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalNav) {
+    modalNav.style.display = "none";
+  }
+} 
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+// Get the video
+var video = document.getElementById("myVideo");
+// Get the button
+//var btn = document.getElementById("myBtn");
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+  </script>
 </body>
 </html>
