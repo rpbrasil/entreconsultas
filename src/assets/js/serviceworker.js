@@ -3,6 +3,8 @@ var cacheAssets = [
 	'/assets/images/sliders/slider-telemed1.jpg',
 	'/assets/images/sliders/slider-telemed2.jpg',
 	'/assets/images/sliders/slider-telemed3.jpg',
+	'https://assets.calendly.com/assets/external/widget.js',
+	'https://www.youtube.com/embed/MdIj5aNDSck?autoplay=1&loop=1'
 
 ];
 

@@ -39,8 +39,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -208,136 +207,38 @@
             width: auto;
             height: auto;">
           </a>
-          <button class="navbar-toggler" type="button">
+          <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu-lines"><span></span></span>
           </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
+          <div class="collapse navbar-collapse" id="mainNavigation"> 
             <ul class="navbar-nav ml-auto">
-              <li class="nav__item has-dropdown" style="display:none">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link active"></a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="index.html" class="nav__item-link">Home Main</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-modern.html" class="nav__item-link">Home Modern</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-classic.html" class="nav__item-link">Home Classic</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-dentist.html" class="nav__item-link">Home Dentist</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="home-pharmacy.html" class="nav__item-link">Home pharmacy</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown">
-                <a onclick="modalNav.style.display='block';" class="nav__item-link" style="cursor:pointer;">Sobre mim</a>
-                <ul class="dropdown-menu" style="display:none">
-                  <li class="nav__item">
-                    <a href="about-us.html" class="nav__item-link">About Us</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="services.html" class="nav__item-link">Our Services</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="services-single.html" class="nav__item-link">single Services</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="appointment.html" class="nav__item-link">Appointments</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="faqs.html" class="nav__item-link">Help & FAQs</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="gallery.html" class="nav__item-link">Our Gallery</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown" style="display:none">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Doctors</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-timetable.html" class="nav__item-link">Doctors Timetable</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-standard.html" class="nav__item-link">Our Doctors Standard</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-modern.html" class="nav__item-link">Our Doctors Modern</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-grid.html" class="nav__item-link">Our Doctors Grid</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-single-doctor1.html" class="nav__item-link">Single Doctor 01</a>
-                  </li> <!-- /.nav-item -->
-                  <li class="nav__item" style="display:none">
-                    <a href="doctors-single-doctor2.html" class="nav__item-link">Single Doctor 02</a>
-                  </li> <!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-              <li class="nav__item has-dropdown" style="display:none">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav__item">
-                    <a href="blog.html" class="nav__item-link">Blog Grid</a>
-                  </li><!-- /.nav-item -->
-                  <li class="nav__item">
-                    <a href="blog-single-post.html" class="nav__item-link">Single Blog Post</a>
-                  </li><!-- /.nav-item -->
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a onclick="modalNav.style.display='block';" class="nav__item-link cl-click" style="cursor:pointer;">Sobre mim</a>
+              </li><!-- /.nav-item -->                            
               <li class="nav__item has-dropdown" style="display:block">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Meus Canais</a>
+                <a href="#" data-toggle="dropdown" data-target=".navbar-collapse" class="dropdown-toggle nav__item-link">Meus Canais</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a onclick="modal.style.display='block';" class="nav__item-link" style="cursor:pointer;">YouTube</a>
+                    <a onclick="modal.style.display='block';" class="nav__item-link cl-click" style="cursor:pointer;"><i class="fab fa-youtube"></i>  YouTube </a>
                   </li><!-- /.nav-item -->
                   <li class="nav__item">
-                    <a href="https://t.me/saudecolorida" class="nav__item-link">Telegram</a>
+                    <a href="https://t.me/saudecolorida" class="nav__item-link  cl-click"><i class="fab fa-telegram"></i>  Telegram </a>
                   </li>
                   <li class="nav__item">
-                    <a href="https://www.instagram.com/saudecolorida_app/" class="nav__item-link">Instagram</a>
+                    <a href="https://www.instagram.com/saudecolorida_app/" class="nav__item-link  cl-click"><i class="fab fa-instagram-square"></i>  Instagram </a>
                   </li>
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#footer" class="nav__item-link">Contato</a>
+                <a href="#footer" class="nav__item-link  cl-click">Contato</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="#services" class="nav__item-link  cl-click">Serviços</a>
               </li><!-- /.nav-item -->
             </ul><!-- /.navbar-nav -->
             <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
           </div><!-- /.navbar-collapse -->
           <div class="d-none d-xl-flex align-items-center position-relative ml-30">
-            <div class="miniPopup-departments-trigger">
-              <!-- <span class="menu-lines" id="miniPopup-departments-trigger-icon"><span></span></span> -->
-              <a href="#services">Serviços</a>
-            </div>
-            <ul id="miniPopup-departments" class="miniPopup miniPopup-departments dropdown-menu" style="display:none">
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Médico online</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Orientação de Saúde</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Terapias Naturais</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Check-up</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Grupos de Apoio</a>
-              </li><!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="department-single.html" class="nav__item-link">Terapia de Casal</a>
-              </li><!-- /.nav-item -->
-            </ul> <!-- /.miniPopup-departments -->
             <a href="#" onclick="handleClicks(Event,'agenda');" class="btn btn__primary btn__rounded ml-30">
               <i class="icon-calendar"></i>
               <span>Agende aqui</span>
@@ -1945,6 +1846,16 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+  </script>
+  <script> 
+
+$('#mainNavigation').on('shown.bs.collapse', function (e) {
+  console.log("abriu o menu!");
+  $('a.nav__item-link.cl-click').on('click', function(){
+    $('#mainNavigation.navbar-collapse').removeClass('menu-opened');
+  });
+});
+
   </script>
 </body>
 </html>
