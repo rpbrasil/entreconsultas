@@ -101,8 +101,8 @@
         },
     
         pt_br: {
-            ios: 'Adicione meu app na sua tela de início: clique %icon e depois <strong>Tela de início</strong>.',
-            android: 'Adicione meu app na sua tela de início: abra o menu de opções do navegador e selecione <strong>Adicionar à tela inicial</strong>. <small>O menu também pode ser acessado, selecionando o ícone %icon no canto superior direito.</small>'
+            ios: 'Adicione meu app na sua tela de início: clique no ícone de Menu e depois <strong>Tela de início</strong>.',
+            android: 'Adicione meu app na sua tela de início: abra o menu de opções do navegador e selecione <strong>Adicionar à tela inicial</strong>. <small>O menu também pode ser acessado, selecionando o ícone de Menu no canto superior direito.</small>'
         },
     
         pt_pt: {
