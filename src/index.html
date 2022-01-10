@@ -3,14 +3,14 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-213722652-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-213722652-1');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213722652-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-213722652-1');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -19,7 +19,7 @@
   <title>Entreconsultas - Médico de Família Online</title>
 
   <link rel="stylesheet" type="text/css" href="assets/css/addtohomescreen.css">
-  <script src="assets/js/addtohomescreen.js"></script>  
+  <script src="assets/js/addtohomescreen.js"></script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon//apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
@@ -39,100 +39,132 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Widget de link do Calendly - início -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">  
-<!-- Widget de link do Calendly - fim -->
-<style>
- /* The Modal (background) */
- .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-}
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Widget de link do Calendly - fim -->
+  <style>
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 9999;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: hidden;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Black w/ opacity */
+    }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #070707;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 2px;
-  border: 1px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
-  height: 80%;
-  top:10%
-}
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #0707073d;
+      margin: 10% auto;
+      /* 15% from the top and centered */
+      padding: 2px;
+      border: 1px solid #888;
+      width: 100%;
+      /* Could be more or less, depending on screen size */
+      height: 80%;
+      top: 0px;
+    }
 
-@media screen and (min-width: 400px) {
-  .modal-content {
-    width: 100%;
-    height: 70%;    
-  }
-}
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-@media screen and (min-width: 800px) {
-  .modal-content {
-    width: 80%;
-    height: 60%;
-  }
-}
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-}
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
+    @media screen and (max-width: 400px) {
+      #myVideo {
+        right: -380px;
+      }
+    }
 
-/* Style the button used to pause/play the video */
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
+    @media screen and (max-width: 550px) and (min-width: 400px) {
+      #myVideo {
+        right: -340px;
+      }
+    }
 
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-}
-</style>
+    @media screen and (max-width: 800px) and (min-width: 550px) {
+      .modal-content {
+        width: 100%;
+        height: 70%;
+      }
+
+      #myVideo {
+        right: -240px;
+      }
+    }
+
+    @media screen and (max-width: 970px) and (min-width: 800px) {
+      .modal-content {
+        width: 80%;
+        height: 60%;
+      }
+
+      #myVideo {
+        right: -191px;
+      }
+    }
+
+    /* Add some content at the bottom of the video/page */
+    .content {
+      position: relative;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Style the button used to pause/play the video */
+    .myBtn {
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
@@ -162,7 +194,8 @@
                       </a>
                       <p>Use esta seção se você estiver em situação de emergência.
                       </p>
-                      <a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');" class="btn btn__secondary btn__link btn__block">
+                      <a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');"
+                        class="btn btn__secondary btn__link btn__block">
                         <span>Agende agora</span> <i class="icon-arrow-right"></i>
                       </a>
                     </div><!-- /.miniPopup-emergency -->
@@ -174,7 +207,8 @@
                     <i class="icon-location"></i><a href="#">Em qualquer lugar do Brasil</a>
                   </li>
                   <li>
-                    <i class="icon-clock"></i><a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');">Veja horários na agenda</a>
+                    <i class="icon-clock"></i><a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');">Veja
+                      horários na agenda</a>
                   </li>
                 </ul><!-- /.contact__list -->
                 <div class="d-flex">
@@ -196,8 +230,7 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/entreconsultas3.png" 
-            class="logo-light" alt="logo" style="max-width:280px;
+            <img src="assets/images/logo/entreconsultas3.png" class="logo-light" alt="logo" style="max-width:280px;
             max-height:145px;
             width: auto;
             height: auto;">
@@ -207,25 +240,32 @@
             width: auto;
             height: auto;">
           </a>
-          <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler hvr-bounce-to-bottom collapsed" type="button" data-toggle="collapse"
+            data-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="menu-lines"><span></span></span>
           </button>
-          <div class="collapse navbar-collapse" id="mainNavigation"> 
+          <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item">
-                <a onclick="modalNav.style.display='block';" class="nav__item-link cl-click" style="cursor:pointer;">Sobre mim</a>
-              </li><!-- /.nav-item -->                            
+                <a onclick="modalNav.style.display='block';" class="nav__item-link cl-click"
+                  style="cursor:pointer;">Sobre mim</a>
+              </li><!-- /.nav-item -->
               <li class="nav__item has-dropdown" style="display:block">
-                <a href="#" data-toggle="dropdown" data-target=".navbar-collapse" class="dropdown-toggle nav__item-link">Meus Canais</a>
+                <a href="#" data-toggle="dropdown" data-target=".navbar-collapse"
+                  class="dropdown-toggle nav__item-link">Meus Canais</a>
                 <ul class="dropdown-menu">
                   <li class="nav__item">
-                    <a onclick="modal.style.display='block';" class="nav__item-link cl-click" style="cursor:pointer;"><i class="fab fa-youtube"></i>  YouTube </a>
+                    <a onclick="modal.style.display='block';" class="nav__item-link cl-click" style="cursor:pointer;"><i
+                        class="fab fa-youtube"></i> YouTube </a>
                   </li><!-- /.nav-item -->
                   <li class="nav__item">
-                    <a href="https://t.me/saudecolorida" class="nav__item-link  cl-click"><i class="fab fa-telegram"></i>  Telegram </a>
+                    <a href="https://t.me/saudecolorida" class="nav__item-link  cl-click"><i
+                        class="fab fa-telegram"></i> Telegram </a>
                   </li>
                   <li class="nav__item">
-                    <a href="https://www.instagram.com/saudecolorida_app/" class="nav__item-link  cl-click"><i class="fab fa-instagram-square"></i>  Instagram </a>
+                    <a href="https://www.instagram.com/saudecolorida_app/" class="nav__item-link  cl-click"><i
+                        class="fab fa-instagram-square"></i> Instagram </a>
                   </li>
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
@@ -249,173 +289,191 @@
     </header><!-- /.Header -->
 
     <!-- The ModalNav -->
-<div id="myModalNav" class="modal">
-  <div class="modal-dialog  modal-lg modal-dialog-centered">    
-    <div class="modal-content" style="color: white;text-align:center;padding:8px;background-color:#283b6a">  
-      <figure>
-        <img src="assets/images/team/rpFoto3-1.jpg" style="padding:3px;border-radius:50%;" width="90" height="108" alt="Dr Augusto">                        
-      </figure>  
-      <p>Sou médico de família e utilizo telemedicina há mais de 30 anos.</p>
-      <p>Não há melhor trabalho que atender os avós, pais e netos de uma família, acompanhar seu crescimento e maturidade, levar saúde e tranquilidade para as pessoas nos quatro cantos do Brasil.</p>
-      <p>Sou feliz e realizado porque sei que isso é um privilégio que poucos podem alcançar.</p>
-      <span class="close" id="closeNav">Clique aqui para fechar &times;</span>
-    </div>
-  </div>
-</div>    
+    <div id="myModalNav" class="modal">
+      <div class="modal-dialog  modal-lg modal-dialog-centered">
+        <div class="modal-content" style="color: white;text-align:center;padding:8px;background-color:#283b6a">
+          <video autoplay muted loop id="myVideo">
+            <source src="assets/videos/Sobre_mim_Entreconsultas.mp4" type="video/mp4">
+            Atualize seu navegador para assistir a este video.
+          </video>
+          <div class="content">
+            <figure>
+              <img src="assets/images/team/rpFoto3-1.jpg" style="padding:3px;border-radius:50%;" width="90" height="108"
+                alt="Dr Augusto">
+            </figure>
+            <p>Sou médico de família e utilizo telemedicina há mais de 30 anos.</p>
+            <p>Não há melhor trabalho que atender os avós, pais e netos de uma família, acompanhar seu crescimento e
+              maturidade, levar saúde e tranquilidade para as pessoas nos quatro cantos do Brasil.</p>
+            <p>Sou feliz e realizado porque sei que isso é um privilégio que poucos podem alcançar.</p>
+            <!-- <span class="close" id="closeNav">Clique aqui para fechar &times;</span> -->
+            <!-- <button id="myBtn" class="myBtn" onclick="myFunction()">Pausar</button> -->
+            <button id="btnFechar" class="myBtn">Fechar</button>
+          </div>
 
-     <!-- Trigger/Open The Modal -->
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">  
-    <span class="close" id="closeVideo">&times;</span>  
-    <iframe width=100% height=100% src="https://www.youtube.com/embed/MdIj5aNDSck?autoplay=0&rel=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-  </div>
-</div>    
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- <span class="close" id="closeVideo">&times;</span> -->
+
+        <iframe width=100% height=100% src="https://www.youtube.com/embed/MdIj5aNDSck?autoplay=0&rel=0&loop=1"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <button id="btnFecharIframe" class="myBtn btn-block">Fechar</button>
+      </div>
+    </div>
 
     <!-- ============================
         Slider
     ============================== -->
     <section class="slider" id="slider">
       <div class="slick-carousel m-slides-0"
-          data-slick='{"slidesToShow": 1, "autoplay":true, "autoplaySpeed":3500, "arrows": false, "dots": false, "speed": 900,"fade": true,"cssEase": "linear"}'>
-          <div class="slide-item align-v-h">
-              <div class="bg-img"><img src="assets/images/sliders/slider-telemed1.jpg" alt="slide img"></div>
-              <div class="container" style="background-color: rgba(233,242,202,0.5);">
-                  <div class="row align-items-center">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
-                          <div class="slide__content">
-                              <h2 class="slide__title">Para quem está começando</h2>
-                              <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
-                              </p>
-                              <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
-                                  <!-- feature item #1 -->
-                                  <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart"></i>
-                                      </div>
-                                      <h2 class="feature__title">Consulta</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #2 -->
-                                  <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-medicine"></i>
-                                      </div>
-                                      <h2 class="feature__title">Orientação</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #3 -->
-                                  <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
-                                      class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart2"></i>
-                                      </div>
-                                      <h2 class="feature__title">Grupo de apoio</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #4 -->
-                                  <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-microscope"></i>
-                                      </div>
-                                      <h2 class="feature__title">Check-up</h2>
-                                  </li><!-- /.feature-item-->
-                              </ul><!-- /.features-list -->
-                          </div><!-- /.slide-content -->
-                      </div><!-- /.col-xl-7 -->
-                  </div><!-- /.row -->
-              </div><!-- /.container -->
-          </div><!-- /.slide-item -->
-          <div class="slide-item align-v-h">
-              <div class="bg-img"><img src="assets/images/sliders/slider-telemed2.jpg" alt="slide img"></div>
-              <div class="container" style="background-color: rgba(233,242,202,0.5);">
-                  <div class="row align-items-center">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
-                          <div class="slide__content">
-                              <h2 class="slide__title">Para quem quer escolher</h2>
-                              <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
-                              </p>
-                              <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
-                                  <!-- feature item #1 -->
-                                  <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart"></i>
-                                      </div>
-                                      <h2 class="feature__title">Consulta</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #2 -->
-                                  <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-medicine"></i>
-                                      </div>
-                                      <h2 class="feature__title">Orientação</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #3 -->
-                                  <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
-                                      class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart2"></i>
-                                      </div>
-                                      <h2 class="feature__title">Grupo de apoio</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #4 -->
-                                  <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-microscope"></i>
-                                      </div>
-                                      <h2 class="feature__title">Check-up</h2>
-                                  </li><!-- /.feature-item-->
-                              </ul><!-- /.features-list -->
-                          </div><!-- /.slide-content -->
-                      </div><!-- /.col-xl-7 -->
-                  </div><!-- /.row -->
-              </div><!-- /.container -->
-          </div><!-- /.slide-item -->
-          <div class="slide-item align-v-h">
-              <div class="bg-img"><img src="assets/images/sliders/slider-telemed3.jpg" alt="slide img"></div>
-              <div class="container" style="background-color: rgba(233,242,202,0.5);">
-                  <div class="row align-items-center">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
-                          <div class="slide__content">
-                              <h2 class="slide__title">Para quem já sabe o que quer</h2>
-                              <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
-                              </p>
-                              <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
-                                  <!-- feature item #1 -->
-                                  <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart"></i>
-                                      </div>
-                                      <h2 class="feature__title">Consulta</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #2 -->
-                                  <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-medicine"></i>
-                                      </div>
-                                      <h2 class="feature__title">Orientação</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #3 -->
-                                  <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
-                                      class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-heart2"></i>
-                                      </div>
-                                      <h2 class="feature__title">Grupo de apoio</h2>
-                                  </li><!-- /.feature-item-->
-                                  <!-- feature item #4 -->
-                                  <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
-                                      <div class="feature__icon">
-                                          <i class="icon-microscope"></i>
-                                      </div>
-                                      <h2 class="feature__title">Check-up</h2>
-                                  </li><!-- /.feature-item-->
-                              </ul><!-- /.features-list -->
-                          </div><!-- /.slide-content -->
-                      </div><!-- /.col-xl-7 -->
-                  </div><!-- /.row -->
-              </div><!-- /.container -->
-          </div><!-- /.slide-item -->
+        data-slick='{"slidesToShow": 1, "autoplay":true, "autoplaySpeed":3500, "arrows": false, "dots": false, "speed": 900,"fade": true,"cssEase": "linear"}'>
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/slider-telemed1.jpg" alt="slide img"></div>
+          <div class="container" style="background-color: rgba(233,242,202,0.5);">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Para quem está começando</h2>
+                  <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
+                  </p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                    <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart"></i>
+                      </div>
+                      <h2 class="feature__title">Consulta</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-medicine"></i>
+                      </div>
+                      <h2 class="feature__title">Orientação</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
+                      class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart2"></i>
+                      </div>
+                      <h2 class="feature__title">Grupo de apoio</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+                    <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-microscope"></i>
+                      </div>
+                      <h2 class="feature__title">Check-up</h2>
+                    </li><!-- /.feature-item-->
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/slider-telemed2.jpg" alt="slide img"></div>
+          <div class="container" style="background-color: rgba(233,242,202,0.5);">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Para quem quer escolher</h2>
+                  <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
+                  </p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                    <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart"></i>
+                      </div>
+                      <h2 class="feature__title">Consulta</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-medicine"></i>
+                      </div>
+                      <h2 class="feature__title">Orientação</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
+                      class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart2"></i>
+                      </div>
+                      <h2 class="feature__title">Grupo de apoio</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+                    <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-microscope"></i>
+                      </div>
+                      <h2 class="feature__title">Check-up</h2>
+                    </li><!-- /.feature-item-->
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/slider-telemed3.jpg" alt="slide img"></div>
+          <div class="container" style="background-color: rgba(233,242,202,0.5);">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Para quem já sabe o que quer</h2>
+                  <p class="slide__desc">Todos os cuidados de um profissional experiente e dedicado.
+                  </p>
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    <!-- feature item #1 -->
+                    <li onclick="handleClicks(Event,'consulta');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart"></i>
+                      </div>
+                      <h2 class="feature__title">Consulta</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #2 -->
+                    <li onclick="handleClicks(Event,'express');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-medicine"></i>
+                      </div>
+                      <h2 class="feature__title">Orientação</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #3 -->
+                    <li onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" style="cursor:pointer"
+                      class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-heart2"></i>
+                      </div>
+                      <h2 class="feature__title">Grupo de apoio</h2>
+                    </li><!-- /.feature-item-->
+                    <!-- feature item #4 -->
+                    <li onclick="handleClicks(Event,'check-up-de-saude');" style="cursor:pointer" class="feature-item">
+                      <div class="feature__icon">
+                        <i class="icon-microscope"></i>
+                      </div>
+                      <h2 class="feature__title">Check-up</h2>
+                    </li><!-- /.feature-item-->
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
       </div><!-- /.carousel -->
-  </section>
+    </section>
     <!-- /.slider -->
 
     <!-- ============================
@@ -435,7 +493,8 @@
                 <a href="#" onclick="handleClicks(Event,'consulta-de-emergencia');" class="phone__number">
                   <i class="icon-phone"></i> <span>Nós ligaremos para você.</span>
                 </a>
-                <small style="color:black;">Serviço sujeito à disponibilidade do profissional. Se você estiver em risco de vida, procure o recurso hospitalar mais próximo.</small>
+                <small style="color:black;">Serviço sujeito à disponibilidade do profissional. Se você estiver em risco
+                  de vida, procure o recurso hospitalar mais próximo.</small>
               </div><!-- /.contact__content -->
             </div><!-- /.contact-box -->
           </div><!-- /.col-md-4 -->
@@ -447,7 +506,8 @@
               <div class="contact__content">
                 <h2 class="contact__title">Minha Agenda</h2>
                 <p class="contact__desc">Você escolhe a forma como quer ser atendido.</p>
-                <a href="#" onclick="handleClicks(Event,'agenda');" style="cursor:pointer" class="btn btn__white btn__outlined btn__rounded">
+                <a href="#" onclick="handleClicks(Event,'agenda');" style="cursor:pointer"
+                  class="btn btn__white btn__outlined btn__rounded">
                   <span>Consulte Meus horários</span><i class="icon-arrow-right"></i>
                 </a>
               </div><!-- /.contact__content -->
@@ -564,25 +624,27 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Médico online</h4>
-                  <p class="service__desc">Faça sua consulta por telemedicina na comodidade do seu 
+                  <p class="service__desc">Faça sua consulta por telemedicina na comodidade do seu
                     lar ou de onde você estiver.
                   </p>
                   <div class="container">
                     <div class="row">
                       <div class="col" style="margin: 0px;text-align: left;">
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>de 0 a 100</li>
-                    <li>Experiência</li>
-                    <li>Tranquilidade</li>
-                  </ul></div>
-                  <div class="col" style="margin: auto;width: 50%;text-align: center;">
-                    <small>Pix ou Cartão</small>
-                    <h2><span class="badge rounded-pill" style="background-color: transparent;
-                      border: 3px solid #21cdc0;">R$180</span></h2>                        
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>de 0 a 100</li>
+                          <li>Experiência</li>
+                          <li>Tranquilidade</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                      border: 3px solid #21cdc0;">R$180</span></h2>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-                  <a href="#" onclick="handleClicks(Event,'consulta');" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleClicks(Event,'consulta');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -597,7 +659,7 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Check-up</h4>
-                  <p class="service__desc">Prevenção sob medida que 
+                  <p class="service__desc">Prevenção sob medida que
                     cabe no seu bolso. Aqui fazemos a solicitação de exames e a análise dos resultados.
                   </p>
                   <div class="container">
@@ -612,11 +674,12 @@
                       <div class="col" style="margin: auto;width: 50%;text-align: center;">
                         <small>Pix ou Cartão</small>
                         <h2><span class="badge rounded-pill" style="background-color: transparent;
-                          border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                          border: 3px solid #21cdc0;">R$ 50</span></h2>
                       </div>
                     </div>
                   </div>
-                  <a href="#" onclick="handleClicks(Event,'check-up-de-saude');" class="btn btn__secondary btn__outlined btn__rounded">
+                  <a href="#" onclick="handleClicks(Event,'check-up-de-saude');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -630,30 +693,32 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Orientação Rápida</h4>
-                  <p class="service__desc">Para dúvidas de exames, efeitos de medicamentos, melhor especialidade, sem perder tempo, sem burocracia.
+                  <p class="service__desc">Para dúvidas de exames, efeitos de medicamentos, melhor especialidade, sem
+                    perder tempo, sem burocracia.
                   </p>
                   <div class="container">
                     <div class="row">
                       <div class="col" style="margin: 0px;text-align: left;">
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Exames</li>
-                    <li>Medicamentos</li>
-                    <li>Especialidades</li>
-                  </ul>
-                </div>
-                <div class="col" style="margin: auto;width: 50%;text-align: center;">
-                  <small>Pix ou Cartão</small>
-                  <h2><span class="badge rounded-pill" style="background-color: transparent;
-                    border: 3px solid #21cdc0;">R$ 50</span></h2>                        
-                </div>
-              </div>
-            </div>
-                  <a href="#" onclick="handleClicks(Event,'express');" class="btn btn__secondary btn__outlined btn__rounded">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Exames</li>
+                          <li>Medicamentos</li>
+                          <li>Especialidades</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 50</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="handleClicks(Event,'express');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
                 </div><!-- /.service__content -->
-              </div>              
+              </div>
               <!-- /.service-item -->
               <!-- service item #4 -->
               <div class="service-item">
@@ -663,25 +728,27 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Terapias Naturais</h4>
-                  <p class="service__desc">Para quem prefere tratamentos naturais e abordagens mais sutis, sem medicamentos alopáticos.
+                  <p class="service__desc">Para quem prefere tratamentos naturais e abordagens mais sutis, sem
+                    medicamentos alopáticos.
                   </p>
                   <div class="container">
                     <div class="row">
                       <div class="col" style="margin: 0px;text-align: left;">
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Florais</li>
-                    <li>Fitoterápicos </li>
-                    <li>Meditação</li>
-                  </ul>
-                </div>
-                <div class="col" style="margin: auto;width: 50%;text-align: center;">
-                  <small>Pix ou Cartão</small>
-                  <h2><span class="badge rounded-pill" style="background-color: transparent;
-                    border: 3px solid #21cdc0;">R$ 60</span></h2>                        
-                </div>
-              </div>
-            </div>
-                  <a href="#" onclick="handleClicks(Event,'terapias-naturais-consulta-inicial');" class="btn btn__secondary btn__outlined btn__rounded">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Florais</li>
+                          <li>Fitoterápicos </li>
+                          <li>Meditação</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 60</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="handleClicks(Event,'terapias-naturais-consulta-inicial');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -695,26 +762,27 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Terapia de Casal</h4>
-                  <p class="service__desc">Encontre uma nova forma de encarar as desilusões e aprenda a lidar 
+                  <p class="service__desc">Encontre uma nova forma de encarar as desilusões e aprenda a lidar
                     com todos os contra-tempos.
                   </p>
                   <div class="container">
                     <div class="row">
                       <div class="col" style="margin: 0px;text-align: left;">
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Dinâmicas</li>
-                    <li>Jogos</li>
-                    <li>Encenação </li>
-                  </ul>
-                </div>
-                <div class="col" style="margin: auto;width: 50%;text-align: center;">
-                  <small>Pix ou Cartão</small>
-                  <h2><span class="badge rounded-pill" style="background-color: transparent;
-                    border: 3px solid #21cdc0;">R$200</span></h2>                        
-                </div>
-              </div>
-            </div>
-                  <a href="#" onclick="handleClicks(Event,'terapia_casal');" class="btn btn__secondary btn__outlined btn__rounded">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Dinâmicas</li>
+                          <li>Jogos</li>
+                          <li>Encenação </li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$200</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="handleClicks(Event,'terapia_casal');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -728,25 +796,27 @@
                 </div><!-- /.service__icon -->
                 <div class="service__content">
                   <h4 class="service__title">Grupos de Apoio</h4>
-                  <p class="service__desc">Para todos aqueles que se sentem sem forças ou sem fé, uma abordagem de renovação e reposicionamento.
+                  <p class="service__desc">Para todos aqueles que se sentem sem forças ou sem fé, uma abordagem de
+                    renovação e reposicionamento.
                   </p>
                   <div class="container">
                     <div class="row">
                       <div class="col" style="margin: 0px;text-align: left;">
-                  <ul class="list-items list-items-layout1 list-unstyled">
-                    <li>Ansiedade</li>
-                    <li>Depressão</li>
-                    <li>Pânico</li>
-                  </ul>
-                </div>
-                <div class="col" style="margin: auto;width: 50%;text-align: center;">
-                  <small>Pix ou Cartão</small>
-                  <h2><span class="badge rounded-pill" style="background-color: transparent;
-                    border: 3px solid #21cdc0;">R$ 50</span></h2>                        
-                </div>
-              </div>
-            </div>
-                  <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');" class="btn btn__secondary btn__outlined btn__rounded">
+                        <ul class="list-items list-items-layout1 list-unstyled">
+                          <li>Ansiedade</li>
+                          <li>Depressão</li>
+                          <li>Pânico</li>
+                        </ul>
+                      </div>
+                      <div class="col" style="margin: auto;width: 50%;text-align: center;">
+                        <small>Pix ou Cartão</small>
+                        <h2><span class="badge rounded-pill" style="background-color: transparent;
+                    border: 3px solid #21cdc0;">R$ 50</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-perdas-frustracoes');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -775,12 +845,13 @@
                       <div class="col" style="margin: auto;width: 50%;text-align: center;">
                         <small>Pix ou Cartão</small>
                         <h2><span class="badge rounded-pill" style="background-color: transparent;
-                          border: 3px solid #21cdc0;">R$ 50</span></h2>                        
+                          border: 3px solid #21cdc0;">R$ 50</span></h2>
                       </div>
                     </div>
                   </div>
-                  
-                  <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-ansiedade-depressao1');" class="btn btn__secondary btn__outlined btn__rounded">
+
+                  <a href="#" onclick="handleClicks(Event,'grupo-de-apoio-ansiedade-depressao1');"
+                    class="btn btn__secondary btn__outlined btn__rounded">
                     <span>Agende</span>
                     <i class="icon-arrow-right"></i>
                   </a>
@@ -880,7 +951,7 @@
             </div><!-- /.feature-item -->
           </div><!-- /.col-lg-3 -->
           <!-- Feature item #2 -->
-          <div onclick="location.href='#services';" style="cursor: pointer;" class="col-sm-6 col-md-6 col-lg-3" >
+          <div onclick="location.href='#services';" style="cursor: pointer;" class="col-sm-6 col-md-6 col-lg-3">
             <div class="feature-item">
               <div class="feature__img" style="display:none">
                 <img src="assets/images/services/2.jpg" alt="service" loading="lazy">
@@ -1178,7 +1249,8 @@
     <!-- ======================
     Não usado testimonial
     ========================= -->
-    <section class="work-process work-process-carousel pt-130 pb-0 bg-overlay bg-overlay-secondary" style="display:none">
+    <section class="work-process work-process-carousel pt-130 pb-0 bg-overlay bg-overlay-secondary"
+      style="display:none">
       <div class="bg-img" style="display:none"><img src="assets/images/banners/1.jpg" alt="background"></div>
       <div class="container" style="display:none">
         <div class="row heading-layout2">
@@ -1672,9 +1744,10 @@
                 <p class="color-gray" style="text-align: center;"">Aqui praticamos a Medicina de Família, voltada ao entendimento
                   da dinâmica do núcleo familiar, com respeito e compaixão.
                 </p>
-                <a href="#" onclick="handleClicks(Event,'agenda');" class="btn btn__primary btn__primary-style2 btn__link">
+                <a href=" #" onclick="handleClicks(Event,'agenda');"
+                  class="btn btn__primary btn__primary-style2 btn__link">
                   <span>Agende seu evento</span> <i class="icon-arrow-right"></i>
-                </a>
+                  </a>
               </div><!-- /.footer-widget__content -->
             </div><!-- /.col-xl-2 -->
             <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1">
@@ -1710,16 +1783,19 @@
               <div class="footer-widget-contact">
                 <h6 class="footer-widget__title color-heading">Contatos</h6>
                 <ul class="contact-list list-unstyled">
-                  <li>Se você tiver alguma dúvida sobre o conteúdo deste site, mande um email clicando no link abaixo.</li>
+                  <li>Se você tiver alguma dúvida sobre o conteúdo deste site, mande um email clicando no link abaixo.
+                  </li>
                   <li>
                     <a href="mailto:dr.augusto.tec@gmail.com" class="phone__number">
                       <i class="icon-email"></i> <span>fale comigo</span>
                       <figure>
-                        <img src="assets/images/team/rpFoto3-1.jpg" style="padding:3px" width="50" height="60" alt="Dr Augusto">                        
+                        <img src="assets/images/team/rpFoto3-1.jpg" style="padding:3px" width="50" height="60"
+                          alt="Dr Augusto">
                       </figure>
                     </a>
                   </li>
-                  <li class="color-body">Todos os nossos atendimentos são realizados na forma de reunião online ou por telefone.</li>
+                  <li class="color-body">Todos os nossos atendimentos são realizados na forma de reunião online ou por
+                    telefone.</li>
                 </ul>
                 <div class="d-flex align-items-center">
                   <a href="#" onclick="handleClicks(Event,'agenda');" class="btn btn__primary btn__link mr-30">
@@ -1764,98 +1840,103 @@
   <script src="assets/js/main.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
-  function handleClicks(event,ctype) {
-    //console.log("evento: ",ctype=='agenda',ctype)
-    gtag('event', ctype, {'send_to':'UA-213722652-1','event_callback': function() {
-      console.log("evento enviado: "+ctype);
-    }});    
-  //console.log('https://calendly.com/dr_augusto/'+ctype);
-      if (ctype=='agenda'){
-        Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto'});return false;
+    function handleClicks(event, ctype) {
+      //console.log("evento: ",ctype=='agenda',ctype)
+      gtag('event', ctype, {
+        'send_to': 'UA-213722652-1', 'event_callback': function () {
+          console.log("evento enviado: " + ctype);
         }
-        else {
-          Calendly.initPopupWidget({url: 'https://calendly.com/dr_augusto/'+ctype});return false;
-        }
+      });
+      //console.log('https://calendly.com/dr_augusto/'+ctype);
+      if (ctype == 'agenda') {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/dr_augusto' }); return false;
+      }
+      else {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/dr_augusto/' + ctype }); return false;
+      }
     }
-            
   </script>
   <script>
     // Ensure that the browser supports the service worker API
     if (navigator.serviceWorker) {
       // Start registration process on every page load
       window.addEventListener('load', () => {
-        	addToHomescreen();
-          navigator.serviceWorker
+        addToHomescreen();
+        navigator.serviceWorker
           // The register function takes as argument
           // the file path to the worker's file
           .register('/assets/js/serviceworker.js')
           // Gives us registration object
           .then(reg => console.log('Service Worker Registered'))
           .catch(swErr => console.log(`Service Worker Installation Error: ${swErr}}`));
-	});
-}
+      });
+    }
   </script>
   <script>
     // Get the modal
-var modal = document.getElementById("myModal");
-var modalNav = document.getElementById("myModalNav");
-// Get the button that opens the modal
-var btn = document.getElementById("myBtnModal");
+    var modal = document.getElementById("myModal");
+    var modalNav = document.getElementById("myModalNav");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtnModal");
+    var btnFechar = document.getElementById("btnFechar");
+    var btnFecharIframe = document.getElementById("btnFecharIframe");
+    // Get the <span> element that closes the modal
+    var span = document.getElementById("closeNav");
+    var span1 = document.getElementById("closeVideo");
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
 
-// Get the <span> element that closes the modal
-var span = document.getElementById("closeNav");
-var span1 = document.getElementById("closeVideo");
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    btnFechar.onclick = function () {
+      modalNav.style.display = "none";
+    }
+    btnFecharIframe.onclick = function () {
+      modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modalNav) {
+        modalNav.style.display = "none";
+      }
+    }
 
-span.onclick = function() {
-  modalNav.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function () {
+      modal.style.display = "none";
+    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalNav) {
-    modalNav.style.display = "none";
-  }
-} 
-
-// When the user clicks on <span> (x), close the modal
-span1.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
-// Get the video
-var video = document.getElementById("myVideo");
-// Get the button
-//var btn = document.getElementById("myBtn");
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    // Get the video
+    var video = document.getElementById("myVideo");
+    // Get the button
+    var btn = document.getElementById("myBtn");
+    // Pause and play the video, and change the button text
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
   </script>
-  <script> 
+  <script>
 
-$('#mainNavigation').on('shown.bs.collapse', function (e) {
-  console.log("abriu o menu!");
-  $('a.nav__item-link.cl-click').on('click', function(){
-    $('#mainNavigation.navbar-collapse').removeClass('menu-opened');
-  });
-});
+    $('#mainNavigation').on('shown.bs.collapse', function (e) {
+      console.log("abriu o menu!");
+      $('a.nav__item-link.cl-click').on('click', function () {
+        $('#mainNavigation.navbar-collapse').removeClass('menu-opened');
+      });
+    });
 
   </script>
 </body>
+
 </html>
