@@ -270,7 +270,7 @@
                 </ul><!-- /.dropdown-menu -->
               </li><!-- /.nav-item -->
               <li class="nav__item">
-                <a href="#footer" class="nav__item-link  cl-click">Contato</a>
+                <a href="#contato" class="nav__item-link  cl-click">Contato</a>
               </li><!-- /.nav-item -->
               <li class="nav__item">
                 <a href="#services" class="nav__item-link  cl-click">Serviços</a>
@@ -291,8 +291,8 @@
     <!-- The ModalNav -->
     <div id="myModalNav" class="modal">
       <div class="modal-dialog  modal-lg modal-dialog-centered">
-        <div class="modal-content" style="color: white;text-align:center;padding:8px;background-color:#283b6a">
-          <video autoplay preload="auto" muted loop id="myVideo">
+        <div class="modal-content" style="color: white;text-align:center;padding:8px;background-color:#0707073d">
+          <video autoplay muted loop id="myVideo">
             <source src="assets/videos/Sobre_mim_Entreconsultas.mp4" type="video/mp4">
             Atualize seu navegador para assistir a este video.
           </video>
@@ -305,8 +305,7 @@
             <p>Não há melhor trabalho que atender os avós, pais e netos de uma família, acompanhar seu crescimento e
               maturidade, levar saúde e tranquilidade para as pessoas nos quatro cantos do Brasil.</p>
             <p>Sou feliz e realizado porque sei que isso é um privilégio que poucos podem alcançar.</p>
-            <!-- <span class="close" id="closeNav">Clique aqui para fechar &times;</span> -->
-            <!-- <button id="myBtn" class="myBtn" onclick="myFunction()">Pausar</button> -->
+
             <button id="btnFechar" class="myBtn">Fechar</button>
           </div>
         </div>
@@ -1774,9 +1773,9 @@
                 </nav>
               </div><!-- /.footer-widget__content -->
             </div><!-- /.col-lg-2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div id="contato" class="col-sm-12 col-md-6 col-lg-4">
               <div class="footer-widget-contact">
-                <h6 class="footer-widget__title color-heading">Contatos</h6>
+                <h6 class="footer-widget__title color-heading">Contato</h6>
                 <ul class="contact-list list-unstyled">
                   <li>Se você tiver alguma dúvida sobre o conteúdo deste site, mande um email clicando no link abaixo.
                   </li>
@@ -1851,6 +1850,8 @@
     }
   </script>
   <script>
+    // Get the video
+    var video = $("#myVideo");
     // Ensure that the browser supports the service worker API
     if (navigator.serviceWorker) {
       // Start registration process on every page load
@@ -1865,18 +1866,16 @@
           .catch(swErr => console.log(`Service Worker Installation Error: ${swErr}}`));
       });
     }
-  </script>
-  <script>
+
     // Get the modal
     var modal = document.getElementById("myModal");
     var modalNav = document.getElementById("myModalNav");
+
     // Get the button that opens the modal
     var btn = document.getElementById("myBtnModal");
     var btnFechar = document.getElementById("btnFechar");
     var btnFecharIframe = document.getElementById("btnFecharIframe");
-    // Get the <span> element that closes the modal
-    // var span = document.getElementById("closeNav");
-    // var span1 = document.getElementById("closeVideo");
+
     // When the user clicks on the button, open the modal
     btn.onclick = function () {
       modal.style.display = "block";
@@ -1895,31 +1894,12 @@
       }
     }
 
-    // When the user clicks on <span> (x), close the modal
-    // span1.onclick = function () {
-    //   modal.style.display = "none";
-    // }
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
-    }
-    // Get the video
-    var video = document.getElementById("myVideo");
-    // Get the button
-    var btn = document.getElementById("myBtn");
-    // Pause and play the video, and change the button text
-    function myFunction() {
-      if (video.paused) {
-        video.play();
-        btn.innerHTML = "Pause";
-      } else {
-        video.pause();
-        btn.innerHTML = "Play";
-      }
-    }
+    }    
   </script>
   <script>
     $('#mainNavigation').on('shown.bs.collapse', function (e) {
