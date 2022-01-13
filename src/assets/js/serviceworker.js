@@ -5,7 +5,7 @@ var cacheAssets = [
 	'/assets/images/sliders/slider-telemed3.jpg',
 	'/assets/videos/Sobre_mim_Entreconsultas.mp4',
 	'https://assets.calendly.com/assets/external/widget.js'
-	// 'https://www.youtube.com/embed/MdIj5aNDSck?autoplay=0&rel=0&loop=1'
+	//'https://www.youtube.com/embed/MdIj5aNDSck?autoplay=0&rel=0&loop=1'
 
 ];
 
