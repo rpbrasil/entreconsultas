@@ -1,9 +1,9 @@
 var cacheName = 'geeks-cache-v1';
 var cacheAssets = [
-	'/assets/images/sliders/slider-telemed1.jpg',
-	'/assets/images/sliders/slider-telemed2.jpg',
-	'/assets/images/sliders/slider-telemed3.jpg',
-	'/assets/videos/Sobre_mim_Entreconsultas.mp4',
+	'/assets/imgVids/images/sliders/slider-telemed1.jpg',
+	'/assets/imgVids/images/sliders/slider-telemed2.jpg',
+	'/assets/imgVids/images/sliders/slider-telemed3.jpg',
+	'/assets/imgVids/videosSobre_mim_Entreconsultas.mp4',
 	'https://assets.calendly.com/assets/external/widget.js'
 	//'https://www.youtube.com/embed/MdIj5aNDSck?autoplay=0&rel=0&loop=1'
 
@@ -15,7 +15,7 @@ self.addEventListener('install', e => {
 	e.waitUntil(
 		caches.open(cacheName)
 			.then(cache => {
-				console.log(`Service Worker: Caching Files: ${cache}`);
+				console.log('Service Worker: Caching Files: ${cache}');
 				cache.addAll(cacheAssets).then(() => self.skipWaiting())
 			})
 	);
