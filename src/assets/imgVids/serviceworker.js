@@ -1,4 +1,4 @@
-var cacheName = 'geeks-cache-v1';
+var cacheName = 'rpbrasil-cache-v1';
 var cacheAssets = [
 	'/assets/imgVids/images/sliders/slider-telemed1.jpg',
 	'/assets/imgVids/images/sliders/slider-telemed2.jpg',
